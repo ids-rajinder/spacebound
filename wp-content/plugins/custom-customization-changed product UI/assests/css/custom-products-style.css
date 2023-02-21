@@ -1,11 +1,13 @@
 .single-product-summary .price {
   font-size: 22px;
+  font-family: "Poppins", Sans-serif;
   color: #233300;
   font-weight: 600;
   }
   .single_product_stock_status {
     text-align: right;
     text-transform: uppercase;
+    color: #000;
     font-weight: 600;
     margin-bottom: 10px;
   }
@@ -66,15 +68,16 @@
     display: none;
   }
   .single.single-product .single-page-promo a.btn {
-    border: 1px solid #2ee0ff;
-    color: #2ee0ff;
+    border: 0px cadetblue;
+    color: #101010;
     text-transform: lowercase;
+    padding: 0px;
   }
   .single.single-product .single-page-promo a.btn:hover {
     background: transparent;
   }
   .related-products-slider-single-product li span:after {
-    background-color: #2ee0ff !important;
+    background-color: #caed00 !important;
   }
   .related-products-slider-single-product .woodmart-products-tabs .products-tabs-title li {
     opacity: 1;
@@ -129,7 +132,7 @@
   .single.single-product .woocommerce-product-gallery .product-image-thumbnail:hover,
   .single.single-product .woocommerce-product-gallery .product-image-thumbnail.active-thumb {
     opacity: 1;
-    border: 1px solid #2ee0ff !important;
+    border: 1px solid #caed00 !important;
   }
   .single.single-product .woocommerce-product-gallery .product-image-thumbnail {
     opacity: 0.5;
@@ -188,7 +191,7 @@
   }
   .single.single-product .store_name_details a,
   .single.single-product .single-products-cat a {
-    /* color: #101010; */
+    color: #101010;
     font-weight: 600;
   }
   span.bb-star-rating {
@@ -203,11 +206,12 @@
   .single.single-product .variations_form .variations label {
     font-size: 15px;
     text-transform: uppercase;
+    color: #000000;
     font-weight: bold;
     padding-left: 12px;
   }
   .single.single-product .single-product-short-description a {
-    color: #2ee0ff;
+    color: #B9D033;
     display: flex;
     align-items: center;
     margin-bottom: 6%;
@@ -225,7 +229,7 @@
     padding-bottom: 16px;
   }
   .products-thc-items > span {
-    color: #2ee0ff;
+    color: #333333;
     border-radius: 8px;
     padding: 12px;
     margin-right: 12px;
@@ -236,17 +240,12 @@
     flex: 0 0 18%;
     justify-content: center;
     align-items: center;
-    border: 1px solid #2ee0ff;
+    border: 1px solid #101010;
     font-weight: bold;
   }
   .products-thc-items svg {
     margin-right:4px;
   }
-  .products-thc-wrapper svg,
-  body .feather_een {
-    fill: #fff;
-  }
-  
   table.custom-single-product-specifications {
     border-collapse: collapse;
     margin-bottom: 0px;
@@ -307,9 +306,11 @@
   .single.single-product .tabs-layout-accordion .woodmart-tab-wrapper .wc-tab {
     padding-bottom: 0px;
     padding-top: 4%;
+    font-family: 'Poppins';
   }
   .woocommerce-product-rating a {
     color: #101010;
+    font-family: 'Poppins';
     font-weight: 500;
 }
   .single.single-product .tabs-location-summary .tabs-layout-accordion .woodmart-accordion-title {
@@ -329,15 +330,15 @@
     /* padding-top: 0%;
     padding-bottom: 0%; */
   }
-  /* .single.single-product b {
+  .single.single-product b {
     color: #000000;
-  } */
+  }
   .entry-summary del .amount {
-    /* color: #101010; */
+    color: #101010;
     font-weight: 600;
   }
   .single-product-price-lable .amount {
-    /* color: #233300; */
+    color: #233300;
     font-weight: bold;
   }
   .single.single-product span.singal-page-divider {
@@ -448,7 +449,6 @@
     .custom-wrapping
     .wd-bottom-actions {
     padding-bottom: 0%;
-    background: #2c2c2c;
   }
   .single-product.woo-variation-swatches
     .related-products-slider-single-product
@@ -583,9 +583,8 @@
   }
   .single-product .related-products-slider-single-product .woodmart-hover-base.product-in-carousel .product-information {
     margin-bottom: 8px;
-    background-color: #2c2c2c;
-    /* border-left: 1px solid #E3E3E3;
-    border-right: 1px solid #E3E3E3; */
+    border-left: 1px solid #E3E3E3;
+    border-right: 1px solid #E3E3E3;
   }
   .single-product .related-products-slider-single-product .isw-variation-price,
   .single-product .related-products-slider-single-product .star-rating {
@@ -596,7 +595,9 @@
     box-shadow: none;
     transition: none;
   }
-  
+  .woocommerce-product-details__short-description p {
+    color: #101010;
+  }
   .single-product p.price span.from {
     display: none;
   }
@@ -649,7 +650,7 @@
   .composite_component
     ul.component_option_thumbnails_container
     li.component_option_thumbnail_container {
-    background: #2c2c2c;
+    background: #ffffff;
     box-shadow: 0px 0px 12px #00000014;
     border-radius: 5px;
     position: relative;
@@ -662,10 +663,11 @@
     box-shadow: none;
   }
   .component_section_title label.select_label {
+    color: #000000;
     font-weight: bold;
   }
   .composite_component.multistep {
-    background: #2c2c2c40;
+    background: rgba(0, 0, 0, 0.03);
     padding: 15px;
   }
   .composite_component p.index.woocommerce-result-count {
@@ -796,8 +798,7 @@
   .composite_component .btn.summary_element_select,
   .composite_component .btn.component_option_thumbnail_select,
   .composite_component .btn.single_add_to_cart_button {
-    background-color: #5fe73a;
-    border-radius: 5px;
+    background-color: transparent;
     color: #101010;
     /* display: flex; */
     align-items: center;
@@ -808,9 +809,10 @@
     text-align: center;
     text-transform: uppercase;
     width: 100%;
+    border: 2px solid #5fe73a;
   }
   .single-product .composite_summary span.step_title_text {
-    color: #2ee0ff;
+    color: #101010;
     font-weight: 600;
   }
   .single-product .composite_summary span.summary_element_content span.content_product_title,
@@ -970,14 +972,14 @@
   }
   .custom-bottom-bar-products-listing .product-list-item .price {
     /* font-size: 14px; */
-    color: #2EE0FF;
+    color: #a8c400;
   }
   .custom-bottom-bar-products-listing .product-list-item .price .amount {
-    color: #2EE0FF;
+    color: #a8c400;
     font-size: 16px;
   }
   .custom-bottom-bar-products-listing .product-list-item .price del .amount {
-    color: #fff;
+    color: #101010;
     font-weight: 600;
   }
   .custom-bottom-bar-products-listing .product-grid-item .product-title a {
@@ -1079,14 +1081,11 @@ span.step_index {
   text-overflow: ellipsis;
   height: 46px;
 }
-/* .related-products-slider-single-product .product-strain {
-  height: 17px;
-} */
+
   @media screen and (min-width: 1260px) {
     .single.single-product .order-lg-first {
       max-width: 20%;
       flex: 0 0 20%;
-      padding-right: 1px;
     }
     .single.single-product .order-lg-last {
       max-width: 80%;
@@ -1146,10 +1145,6 @@ span.step_index {
     .composite_data.multistep .summary_element_image{
       height: 150px;
     }
-    .single-product .related-products-slider-single-product .woodmart-hover-base.product-in-carousel .product-information {
-      margin-bottom: 0px;
-    }
-    
     .single_product_stock_status {
       width: auto;
     }
@@ -1195,7 +1190,7 @@ span.step_index {
     .single-product-summary
       .related-products-slider-single-product
       .custom-wrapping {
-      bottom: -10px;
+      bottom: -16px;
     }
     .single-product-summary
       .related-products-slider-single-product

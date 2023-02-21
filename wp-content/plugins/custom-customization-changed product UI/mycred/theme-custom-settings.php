@@ -1,9 +1,11 @@
-  <?php
+<?php
 
 
 if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 
-class bbCustomVariables{
+use XTS\Options;
+
+class themeCustomSettingOption{
 
   /**
   * The one, true instance of this object.
@@ -13,58 +15,46 @@ class bbCustomVariables{
   * @var null|object
   */
   private static $instance = null;
-  private $shopPageID = 10;
-  // private $rewardPageID = 3588;
-  private $rewardPageID = 19592;
-  private $contactPageID = 651;
-  private $shopPage ;
 
-  private $pointsCurrency = 'Points';
-  public $cssTohide = 'style="display:none"';
-  private $format   = '%2$s&nbsp;%1$s';
+  private $plugin_path;
+  private $plugin_url;
 
-  #Number of coupons user can use while checkout to get discount for normal products. 
-  private $maxCouponCount = 3 ;
+  public function __construct(){
+    $this->plugin_path = CUSTOM_BBS_PATH;
+    $this->plugin_url  = CUSTOM_BBS_URL;
 
-  public function __construct() {
-    $this->shopPage = wc_get_page_permalink( 'shop' );
+    $this->addCustomSettingSection();
+
   }
 
-  public function shopPagelink(){
-    return $this->shopPage;
+  public function addCustomSettingSection(){
+    /**
+     * IDS Custom settings.
+     */
+    Options::add_section(
+      array(
+        'id'       => 'ids-custom-settings',
+        'name'     => esc_html__( 'IDS Custom settings', 'woodmart' ),
+        'priority' => 160,
+        'icon'     => 'dashicons dashicons-hammer',
+      )
+    );
+
+    Options::add_field(
+      array(
+        'id'          => 'weekend_double_xp',
+        'name'        => esc_html__( 'Enable weekend double xp mode', 'woodmart' ),
+        'description' => esc_html__( 'If enabled then the user will earn doulbe point during checkout.', 'woodmart' ),
+        'type'        => 'switcher',
+        'section'     => 'ids-custom-settings',
+        'default'     => false,
+        'priority'    => 10,
+      )
+    );
+
   }
- public function rewardPageID(){
-   return $this->rewardPageID;
- }
 
- public function shopPageID(){
-  return $this->shopPageID;
-}
-
-public function contactPageID(){
-  return $this->contactPageID;
-}
-
-public function maxCouponCount(){
-  return $this->maxCouponCount;
-}
-
-public function getPointsCurrencyFormat(){
-  return $this->format;
-}
-
-public function getPointsCurrency(){
-  return $this->pointsCurrency;
-}
-
-public function CssDisplayNone(){
-  return $this->cssTohide;
-}
-
-public function pointCurrencyFormat(){
-  return $this->format;
-}
-/**
+  /**
    *  Function Name : error_reporting
    *  Working       : This function is used for php error_reporting.
   */
@@ -109,7 +99,7 @@ public function pointCurrencyFormat(){
   */
   public static function get_instance() {
     if ( null === self::$instance ) {
-      self::$instance = new bbCustomVariables();
+      self::$instance = new themeCustomSettingOption();
     }
     return self::$instance;
   }

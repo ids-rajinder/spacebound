@@ -15,7 +15,7 @@ class bbCustomVariables{
   private static $instance = null;
   private $shopPageID = 10;
   // private $rewardPageID = 3588;
-  private $rewardPageID = 19592;
+  private $rewardPageID = 3588;
   private $contactPageID = 651;
   private $shopPage ;
 
